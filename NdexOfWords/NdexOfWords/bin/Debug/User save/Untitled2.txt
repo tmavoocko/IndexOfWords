@@ -1,0 +1,258 @@
+ddd
+-------------------------------------------
+Your text contains:
+Kvadratická @(1/1)
+rovnice @(1/2)
+Program @(3/0)
+který @(3/1, 20/18)
+řeší @(3/2, 59/11, 60/10)
+kvadratickou @(3/3)
+rovnici @(3/4)
+Varianty: @(5/0, 22/0, 34/0, 45/0)
+Windows @(6/1, 20/23, 35/1, 36/1, 37/1, 46/1, 47/1, 48/1)
+aplikace @(6/2, 7/2, 8/2, 9/2)
+choosed @(6/4)
+varint @(6/5)
+---------b) @(7/0)
+výpočet @(7/3, 8/3, 9/3)
+serveru @(7/5, 9/5)
+výsledek @(7/6, 9/6, 35/6, 36/6, 46/6, 47/6)
+dodá @(7/7)
+obnovením @(7/8, 9/8)
+stránky @(7/9, 9/9)
+---------c) @(8/0)
+klientu @(8/5)
+JavaScript) @(8/7)
+---------d) @(9/0)
+Obdélníkový @(12/1)
+kalkulátor @(12/2)
+obdélníky @(14/1)
+realizovat @(14/2)
+"aritmetiku": @(14/3)
+součet/sjednocení @(15/1)
+nejmenší @(15/3)
+obdélník @(15/4, 16/4, 17/8, 20/12)
+zahrnující @(15/5)
+operandy @(15/8)
+(obdélníky) @(15/9)
+průnik @(16/1)
+největší @(16/3, 17/7)
+uvnitř @(16/5, 17/10)
+obou @(16/6)
+operandů @(16/7)
+popř @(17/0, 25/6, 56/16)
+vyšší @(17/2)
+složitost: @(17/3)
+rozdíl @(17/5)
+ležící @(17/9)
+prvního @(17/11)
+mimo @(17/13)
+druhý @(17/14)
+operand @(17/15)
+Pozn @(19/0, 20/0)
+Velikost @(19/2)
+chápána @(19/4)
+plochou @(19/5)
+hrany @(19/6)
+ignoruje @(19/7)
+smyslu @(19/9)
+jsou @(19/11)
+součástí @(19/12)
+operandu @(19/13)
+výsledku @(19/15)
+test @(20/4)
+třídy @(20/6)
+třída @(20/8, 20/11)
+jejich @(20/14)
+metody @(20/15)
+Následně @(20/16)
+program @(20/17, 59/10, 60/3)
+zpřístupní @(20/20)
+uživatele @(20/22)
+příkazová @(20/27)
+řádka @(20/28)
+strany @(23/1)
+obdélníků @(23/2)
+rovnoběžné @(23/3)
+osami @(23/5)
+zadání @(23/8, 24/4, 35/2, 36/2, 46/2, 47/2)
+dvou @(23/9)
+párů @(23/10, 24/6)
+vrcholů @(23/11, 24/7)
+výběr @(23/13, 24/9)
+operace @(23/14, 24/10)
+obecně @(24/1)
+umístěné @(24/2)
+obdélníky; @(24/3)
+třech @(24/5)
+"algebra" @(25/1, 26/1)
+včetně @(25/2, 26/2)
+závorek @(25/3)
+např @(25/8)
+symbolických @(26/3)
+jednopísmenných @(26/4)
+proměnných @(26/5)
+přiřazování @(26/7)
+Frekvenční @(30/1)
+tabulka @(30/2, 53/2)
+zadaný @(32/1, 43/1)
+text @(32/2, 37/2, 38/2, 43/2, 48/2, 49/2)
+vytvořit @(32/3, 43/3, 56/9)
+tabulku @(32/4, 32/9)
+frekvencí @(32/6, 32/11)
+slov @(32/7, 41/2)
+znaků @(32/12)
+Zvládat @(32/13, 43/33)
+diakritiku @(32/15, 43/35)
+cizí @(32/17, 43/37)
+znakové @(32/18, 43/38)
+sady @(32/19, 43/39)
+textu @(35/3, 36/3, 43/12, 46/3, 47/3)
+okna @(35/5, 35/9, 36/5, 46/5, 47/5)
+opět @(35/7)
+dynamicky @(36/7, 47/7, 60/4)
+druhém @(36/9, 47/9)
+okně @(36/10, 47/10)
+(textovém @(36/11)
+rámci) @(36/12)
+každé @(36/14, 47/13)
+dokončeném @(36/15, 47/14)
+slově @(36/16, 47/15)
+souboru @(37/4, 38/4, 48/4, 49/4)
+Index @(41/1)
+index @(43/4)
+slovník @(43/6)
+označeném @(43/8)
+všech @(43/9)
+výskytů @(43/10)
+podobě @(43/14, 59/14)
+číslo @(43/15, 43/18, 43/28)
+řádku @(43/16)
+lomítko @(43/17)
+pozice @(43/19)
+Ignorovat @(43/20)
+slova @(43/21, 43/26, 43/29)
+kratší @(43/22)
+znaky @(43/25)
+obsahující @(43/27)
+samými @(43/30)
+velkými @(43/31)
+písmeny @(43/32)
+(rámci) @(47/11)
+Kurzová @(53/1)
+graf @(53/4, 62/3)
+použitím @(56/1)
+kurzech @(56/4)
+nebo @(56/7)
+nástroj @(56/10)
+vypsání @(56/12)
+kurzu @(56/13)
+měny @(56/14)
+(měn) @(56/15)
+grafu @(56/17)
+Kurzy @(56/18)
+uložené @(56/19)
+databázi @(56/21)
+Varianty @(58/0)
+data @(59/1, 60/1)
+ručně @(59/2)
+stáhnuté @(59/3)
+webu @(59/5, 60/7)
+nahraná @(59/7)
+dotaz @(59/12, 60/11)
+datum @(59/15, 60/12)
+měna @(59/17, 60/14, 61/7)
+stahuje @(60/5)
+dtto @(61/1, 62/1)
+navíc @(61/2)
+možnost @(61/3)
+tabulky @(61/4)
+datum-od @(61/5)
+datum-do @(61/6)
+plus @(62/2)
+Pozn.: @(64/0)
+http://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.jsp @(65/0)
+položka @(65/2)
+stažení @(65/3)
+textovém @(65/5)
+formátu @(65/6)
+https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html @(66/0)
+time @(66/2)
+series @(66/3)
+http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml @(67/0)
+433 words. 
+Letters Count: 
+3194
+Frequency of occurrence: 
+WhiteSpace: 
+=) 68 *
+WhiteSpace:  =) 403 *
+Separator:  =) 0 *
+Digit: 0=) 4 *
+Digit: 1=) 6 *
+Digit: 2=) 4 *
+Digit: 3=) 3 *
+Digit: 4=) 2 *
+Digit: 5=) 1 *
+Letter: A=) 22 *
+Letter: B=) 5 *
+Letter: C=) 2 *
+Letter: D=) 21 *
+Letter: E=) 22 *
+Letter: F=) 1 *
+Letter: I=) 2 *
+Letter: J=) 2 *
+Letter: K=) 5 *
+Letter: L=) 20 *
+Letter: N=) 23 *
+Letter: O=) 43 *
+Letter: P=) 7 *
+Letter: S=) 22 *
+Letter: T=) 1 *
+Letter: V=) 6 *
+Letter: W=) 13 *
+Letter: X=) 1 *
+Letter: Z=) 2 *
+Letter: a=) 161 *
+Letter: b=) 52 *
+Letter: c=) 55 *
+Letter: d=) 105 *
+Letter: e=) 150 *
+Letter: f=) 12 *
+Letter: g=) 13 *
+Letter: h=) 33 *
+Letter: i=) 79 *
+Letter: j=) 21 *
+Letter: k=) 79 *
+Letter: l=) 65 *
+Letter: m=) 50 *
+Letter: n=) 139 *
+Letter: o=) 171 *
+Letter: p=) 58 *
+Letter: r=) 103 *
+Letter: s=) 82 *
+Letter: t=) 133 *
+Letter: u=) 78 *
+Letter: v=) 83 *
+Letter: w=) 20 *
+Letter: x=) 22 *
+Letter: y=) 42 *
+Letter: z=) 45 *
+Letter: á=) 33 *
+Letter: é=) 24 *
+Letter: í=) 59 *
+Letter: ý=) 24 *
+Letter: Č=) 2 *
+Letter: č=) 17 *
+Letter: ě=) 24 *
+Letter: ř=) 22 *
+Letter: š=) 10 *
+Letter: ů=) 9 *
+Letter: ž=) 13 *
+--------------------------------------------------------------------------------------
+Your text contains:
+1 slov, 
+Celkem použito písmen: 
+3
+Frekvence výskytu: 
+Písmeno: d=) 3 x
