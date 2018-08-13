@@ -32,8 +32,10 @@ namespace NdexOfWords
         public bool Mvble = false;
         public bool ClckdBefore = false;
         public Color ClrInver;
-        public Color ClrdFrnt = Color.FromArgb(255,32, 45, 37);
-        public Color ClrdBck = Color.Chocolate;
+        //public Color ClrdFrnt = Color.FromArgb(255,32, 45, 37);
+        public Color ClrdBck = Color.Black;
+        //public Color ClrdBck = Color.FromArgb(200, Color.Black);
+        public Color ClrdFrnt = Color.FromArgb(200, Color.Tomato);
         public Color BClrPanel;
         public Color MsOver = Color.FromArgb(166,Color.LightGray);
         public void MyClrInvrt(Color cl)
@@ -46,7 +48,7 @@ namespace NdexOfWords
 
 
         public Font LddTxtFnt = new Font("Litograph", 9, FontStyle.Italic | FontStyle.Bold | FontStyle.Underline);
-        public PnTxt(Control parent, Point p, Size sz, Color bclr,  Font fnt,bool wrtnTxt)
+        public PnTxt(Control parent, Point p, Size sz, Color bclr, Color bClrUsvl, Color frClrUsvl,  Font fnt,bool wrtnTxt)
         {
             
             {//This
@@ -158,7 +160,7 @@ namespace NdexOfWords
             }//This
             {//Textbox
 
-                UsVl.BackColor = ClrdBck; UsVl.ForeColor = ClrdFrnt;
+                UsVl.BackColor = bClrUsvl; UsVl.ForeColor = frClrUsvl;
                 UsVl.Font = fnt;
 
                 Rectangle pnlScreen = new Rectangle(Location.X, Location.Y, Width, Height);
@@ -217,8 +219,8 @@ namespace NdexOfWords
 
                             if (Cnst.A.WrtnTxt == false&& Cnst.A.UsVl.Text == UsVl.Text)
                             {
-                                Cnst.B.UsVl.Focus();
-                                Cnst.B.UsVl.SelectionStart = Cnst.B.UsVl.Text.Length;
+                                //Cnst.B.UsVl.Focus();
+                                //Cnst.B.UsVl.SelectionStart = Cnst.B.UsVl.Text.Length;
                             }
                             if (this.Location == mdFrameLoc)
                             {
@@ -294,7 +296,7 @@ namespace NdexOfWords
                             //UsVl.Invalidate();
                             //UsVl.SelectAll();
                             //UsVl.SelectionProtected = true;
-                            Cnst.B.UsVl.Focus ();
+                            //Cnst.B.UsVl.Focus ();
                             //then compair chars - itireteration
 
                             //then delete the changes
@@ -338,15 +340,10 @@ namespace NdexOfWords
                 };
                 UsVl.TextChanged += (sender, e) =>
                 {
-                    //MessageBox.Show("txt changed");
-
                     if (Cnst.A.UsVl.Text== UsVl.Text)
                     {
-
-
                         ParseText();
                         string prsTxt = "";
-                        //Cnst.C.UsVl.Text = "";
                         foreach (KeyValuePair<string, List<Tuple<int, int>>> kvp in validWords)
                         {
                             if (prsTxt != "") prsTxt += "\r\n";
@@ -355,7 +352,7 @@ namespace NdexOfWords
                             foreach (Tuple<int, int> t in kvp.Value)
                             {
                                 if (output != "") output += ", ";
-                                output += t.Item1.ToString() + "/" + t.Item2.ToString();
+                                output += (t.Item1+1).ToString() + "/" + (t.Item2+1).ToString();
                             }
                             prsTxt += output + ")";
                             {//Two-Colored WORKING!!
@@ -364,7 +361,7 @@ namespace NdexOfWords
                                     String sentence1 = Cnst.A.UsVl.Text;
                                     String sentence2 = kvp.Key;
                                     String sentence3 = kvp.Key;
-                                    cction2 = sentence1 + sentence2+sentence3;
+                                    cction2 = sentence1 + sentence2;// +sentence3;
                                     int start1 = cction2.IndexOf(sentence1);//correction of IndexOf()  -for every newLine neded!                                    
                                     String subString1 = cction2.Substring(start1, sentence1.Length);
                                     bool match1 = (sentence1 == subString1); // true
@@ -376,25 +373,25 @@ namespace NdexOfWords
                                     int start2 = cction2.IndexOf(sentence2);
                                     String subString2 = cction2.Substring(start2, sentence2.Length);
                                     bool match2 = (sentence2 == subString2); // true
-                                    Cnst.A.UsVl.SelectionStart = start2;
-                                    Cnst.A.UsVl.SelectionLength = sentence2.Length;
-                                    Cnst.A.UsVl.SelectionColor = Color.Blue;
+                                    //Cnst.A.UsVl.SelectionStart = start2;
+                                    //Cnst.A.UsVl.SelectionLength = sentence2.Length;
+                                    //Cnst.A.UsVl.SelectionColor = Color.Blue;
 
                                     int whl = kvp.Value.Count - 1;
                                     if (kvp.Value.Count>0)
                                     {
-                                        while (whl>(-100))
-                                        {
+                                        //while (whl>(-1))
+                                        //{
 
-                                            int start3 = kvp.Value[whl].Item2;
-                                            String subString3 = cction2.Substring(start3, sentence3.Length);
-                                            bool match3 = (sentence3 == subString3);
-                                            Cnst.A.UsVl.SelectionStart = start3;
-                                            Cnst.A.UsVl.SelectionLength = sentence3.Length;
-                                            Cnst.A.UsVl.SelectionColor = Color.AliceBlue;
-                                            whl--;
+                                        //    int start3 = kvp.Value[whl].Item2;
+                                        //    String subString3 = cction2.Substring(start3, sentence3.Length);
+                                        //    bool match3 = (sentence3 == subString3);
+                                        //    Cnst.A.UsVl.SelectionStart = start3;
+                                        //    Cnst.A.UsVl.SelectionLength = sentence3.Length;
+                                        //    Cnst.A.UsVl.SelectionColor = Color.AliceBlue;
+                                        //    whl--;
 
-                                        }
+                                        //}
 
                                     }
                                     //int start3 = kvp.Value[0].Item2;//(sentence3);
@@ -519,120 +516,18 @@ namespace NdexOfWords
                             }//Letters frequency
 
                             //MessageBox.Show(output);
-                            Cnst.C.UsVl.Text = "Filtered words:" + Environment.NewLine + prsTxt + Environment.NewLine + Environment.NewLine + "Your text contains:" + Environment.NewLine + (wordCount).ToString() + " words. " + Environment.NewLine + "Letters Count: " + Environment.NewLine + (index).ToString() + Environment.NewLine + "Frequency of occurrence: " + Environment.NewLine + output;
+                            Cnst.C.UsVl.Text = "Dictionary of filtered words:" + Environment.NewLine + prsTxt + Environment.NewLine + Environment.NewLine + "Your text contains:" + Environment.NewLine + (wordCount).ToString() + " words. " + Environment.NewLine + "Letters Count: " + Environment.NewLine + (index).ToString() + Environment.NewLine + "Frequency of occurrence: " + Environment.NewLine + output;
                             Cnst.C.UsVl.Invalidate();
                         }//Base data minig
-                        //Cnst.B.UsVl.Invalidate();
-                    }
-                    if (Cnst.B.UsVl.Text == UsVl.Text)
-                    {
-                        Cnst.D.UsVl.Text = "";
-
-                        int wordCount = 0, index = 0;
-                        {//Words Count algoritm
-                            var text = UsVl.Text.Trim();
-                            
-
-                            while (index < text.Length)
-                            {
-                                // check if current char is part of a word
-                                while (index < text.Length && !char.IsWhiteSpace(text[index]))
-                                    index++;
-
-                                wordCount++;
-
-                                // skip whitespace until next word
-                                while (index < text.Length && char.IsWhiteSpace(text[index]))
-                                    index++;
-                            }
-
-                        }//Words Count algoritm
-
                         
-                        string output = "";
-                        {//Letters frequency
-                         // 1.
-                         // Array to store frequencies.
-                            int[] c = new int[(int)char.MaxValue];
-
-                            // 2.
-                            // Read entire text file.
-                            string s = UsVl.Text;
-
-                            // 3.
-                            // Iterate over each character.
-                            foreach (char t in s)
-                            {
-                                // Increment table.
-                                c[(int)t]++;
-                            }
-
-                            // 4.
-                            // Write all letters found.
-                            int sprtrCorr = 0;
-                            for (int i = 0; i < (int)char.MaxValue; i++)
-                            {
-                                if (c[i] > 0 &&char.IsLetter((char)i))
-                                {
-                                    output += ("Písmeno: " + (char)i + "=) " + c[i] + " x" + Environment.NewLine);
-                                    //Console.WriteLine("Letter: {0}  Frequency: {1}",
-                                    //    (char)i,
-                                    //    c[i]);
-                                }
-                                if (c[i] > 0 && char.IsDigit((char)i))
-                                {
-                                    output += ("Číslice: " + (char)i + "=) " + c[i] + " x" + Environment.NewLine);
-                                    //Console.WriteLine("Letter: {0}  Frequency: {1}",
-                                    //    (char)i,
-
-                                }
-                                if (c[i] > 0 && char.IsWhiteSpace((char)i))
-                                {
-                                    sprtrCorr = c[i];
-                                    output += ("Mezera: " + (char)i + "=) " + c[i] + " x" + Environment.NewLine);
-                                    //Console.WriteLine("Letter: {0}  Frequency: {1}",
-                                    //    (char)i,
-
-                                }
-                                if (c[i] > 0 && char.IsSeparator((char)i))
-                                {
-                                    output += ("Oddělovač: " + (char)i + "=) " + (c[i] -sprtrCorr)+ " x" + Environment.NewLine);
-                                    //Console.WriteLine("Letter: {0}  Frequency: {1}",
-                                    //    (char)i,
-
-                                }
-                                
-                            }
-
-                        }//Letters frequency
-
-                        //MessageBox.Show(output);
-                        Cnst.D.UsVl.Text = "Your text contains:" + Environment.NewLine  + (wordCount).ToString() + " slov, "+Environment.NewLine+ "Celkem použito písmen: " + Environment.NewLine + (index).ToString() + Environment.NewLine+"Frekvence výskytu: "+Environment.NewLine+output;
-                        Cnst.D.UsVl.Invalidate();
                     }
-                    if (Cnst.D.UsVl.Text == UsVl.Text)
+                    
+
                     {
-                        List<string> output = new List<string>();
-                        try { Cnst.justTwo.Dispose(); } catch (Exception) { }
-                        try { Cnst.justOne.Dispose(); } catch (Exception) { }
-                        {//Show statistics//changest to text from original file
-                            var first = Cnst.B.UsVl.Text.Split(' ');
-                            var second = Cnst.D.UsVl.Text.Split(' ');
-                            var primary = first.Length > second.Length ? first : second;
-                            var secondary = primary == second ? first : second;
-                            var difference = primary.Except(secondary).ToArray();
-                            output = difference.ToList();
-                            
-                            //MessageBox.Show(output);
-                            //Cnst.B.UsVl.Text = output;
-                            Cnst.B.UsVl.Invalidate();
-                        }//Show statistics
-                    }
-
-                    //if (System.Text.RegularExpressions.Regex.IsMatch(UsVl.Text, "[^0-9]"))
-                    //{
-                    //    //
-                    //    //
+                        //if (System.Text.RegularExpressions.Regex.IsMatch(UsVl.Text, "[^0-9]"))
+                        //{
+                        //    //
+                        //    //
 
                         //    //
 
@@ -662,19 +557,14 @@ namespace NdexOfWords
                         //    //
                         //    UsrVal = 0;
                         //}
+                    }
 
 
                 };
                 UsVl.MouseHover += (sender, e) =>
                 {
                     BackColor = BClrPanel;
-                    if (Cnst.A.UsVl.Text == UsVl.Text && Cnst.A.WrtnTxt == true && Cnst.B.UsVl.Text != "" && Cnst.A.UsVl.Text != Cnst.B.UsVl.Text)
-                    {
-                        //ToolTip hint = new ToolTip();
-                        //hint.SetToolTip(Cnst.A.UsVl, "Writing in this window will" + Environment.NewLine + " discard changes from the window" + Environment.NewLine + " below right now. To avoid loosing" + Environment.NewLine + " your work press Commit first.");
-                        //MTltip hnt = new MTltip(Cnst.A.UsVl, Cnst.A.UsVl, "Writing in this window will" + Environment.NewLine + " discard changes from the window" + Environment.NewLine + " below right now. To avoid loosing" + Environment.NewLine + " your work press Commit first.", 80);
-
-                    }
+                    
                     BackColor = MsOver;
                     
                     
@@ -687,55 +577,19 @@ namespace NdexOfWords
                 {
                     if (Cnst.A.UsVl.Text == UsVl.Text && Cnst.A.UsVl.Text != "")
                     {        
-                        Cnst.A.UsVl.SelectAll();
-                        Cnst.A.UsVl.SelectionColor = Color.Black;
-                        Cnst.A.UsVl.DeselectAll();
+                        //Cnst.A.UsVl.SelectAll();
+                        //Cnst.A.UsVl.SelectionColor = Color.Black;
+                        //Cnst.A.UsVl.DeselectAll();
                     }
-                    if (Cnst.B.UsVl.Text == UsVl.Text && Cnst.B.UsVl.Text != "" )
-                    {
-                        Cnst.B.UsVl.SelectAll();
-                        Cnst.B.UsVl.SelectionColor = Color.Black;
-                        Cnst.B.UsVl.DeselectAll();
-                    }
-                    BackColor = Color.FromArgb(90, BClrPanel);
+                    
                 };
                 UsVl.LostFocus += (sender, e) =>
                 {
-                    
-                    BackColor = BClrPanel;
                 };
 
                 Controls.Add(UsVl);
             }//Textbox
-            {//Buttons
-                //{//Undo
-                //    Button Ndo = new Button();
-                //    Ndo.Anchor = AnchorStyles.Left+5 | AnchorStyles.Top+2;
-                //    Ndo.Text = "<";
-                //    Ndo.Size = new Size((Width - UsVl.Width) / 2-1, Height/10);// - UsVl.Height) / 2);
-                //    Ndo.Font = new Font("Litograph", 9, FontStyle.Regular);
-                //    Ndo.Visible = false;
-                //    Controls.Add(Ndo);
-                //    UsVl.Click += (sender, e) =>
-                //    {
-                //        Ndo.Visible = true;
-                //    };
-                //}//Undo
-                //{//Redo
-                //    Button Rdo = new Button();
-                //    Rdo.Anchor = AnchorStyles.Left+5 | AnchorStyles.Top+2+ (Height / 10);
-                //    Rdo.Text = ">";
-                //    Rdo.Font= new Font("Litograph", 9, FontStyle.Regular);
-                //    Rdo.Size = new Size((Width - UsVl.Width) / 2, (Height - UsVl.Height) );
-                //    Rdo.Visible = false;
-                //    Controls.Add(Rdo);
-                //    UsVl.Click += (sender, e) =>
-                //    {
-                //        Rdo.Visible = true;
-                //    };
-                //}//Redo
-
-            }//Buttons
+            
             if (ShdOver==true)
             {
                 {//ShadeOver

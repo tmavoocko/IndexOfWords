@@ -17,7 +17,7 @@ namespace NdexOfWords
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            Application.Run(new TxtSpltr());
+            Application.Run(new IndexOfWords());
             //Application.Run(new RssSniffer());
             //Application.Run(new MainForm());
         }
